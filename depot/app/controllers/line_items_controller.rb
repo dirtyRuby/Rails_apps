@@ -60,7 +60,13 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.json
   def destroy
-    @line_item.destroy
+    @line_item = LineItem.find(params[:product_id])
+    if @line_item.quantity > 1
+      @line_item.update_attributes(quantity: @line_item.quantity - 1)
+    else
+      @line_item.destroy
+    end
+
     respond_to do |format|
       format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
       format.json { head :no_content }
@@ -75,6 +81,6 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      params.require(:line_item).permit(:product_id, :cart_id)
+      params.require(:line_item).permit(:product_id)
     end
 end
