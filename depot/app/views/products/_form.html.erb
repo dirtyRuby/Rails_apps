@@ -24,6 +24,10 @@
     <%= f.text_field :image_url %>
   </div>
   <div class="field">
+    <%= f.label :product_locale %><br>
+    <%= f.select :product_locale, locale_select, prompt: "Select locale" %>
+  </div>
+  <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>

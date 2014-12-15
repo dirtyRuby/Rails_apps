@@ -1,0 +1,10 @@
+o: ActiveSupport::Cache::Entry:@valueI"Q            <div class="entry">
+                <img alt="Img" src="/images/img.jpg" />
+                <h3>Jquery for beginers</h3>
+                This is a good book for you.
+                <div class="price_line">
+                    <span class="price">$39.99</span>
+                    <form action="/en/line_items?product_id=8" class="button_to" data-remote="true" method="post"><div><input type="submit" value="Add to Card" /><input name="authenticity_token" type="hidden" value="r094SJhBg4CkH49KPA7y3b1W01Mf42OP1uHQVbMYsj4=" /></div></form>
+                </div>
+            </div>
+:ET:@created_atf1418047236.7388363:@expires_in0

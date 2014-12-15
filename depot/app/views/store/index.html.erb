@@ -1,11 +1,9 @@
 <% if notice %>
     <p id="notice"><%= notice %></p>
 <% end %>
-<h1>Your Pragmatic Catalog</h1>
+<h1><%= t('.title_html') %></h1>
 <div id="session">
-    <%= "You have been here for #{pluralize(@counter, 'time')}"\
-        if @counter > 5\
-    %>
+    <%= "You have been here for #{pluralize(@counter, 'time')}" if @counter > 5 %>
 </div>
 <% cache ['store', Product.latest] do %>
     <% @products.each do |product| %>
@@ -16,7 +14,7 @@
                 <%= sanitize(product.description) %>
                 <div class="price_line">
                     <span class="price"><%= number_to_currency(product.price) %></span>
-                    <%= button_to 'Add to card', line_items_path(product_id: product) %>
+                    <%= button_to t('.add_html'), line_items_path(product_id: product), remote: true %>
                 </div>
             </div>
         <% end %>

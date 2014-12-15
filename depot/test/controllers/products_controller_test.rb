@@ -2,12 +2,13 @@ require 'test_helper'
 
 class ProductsControllerTest < ActionController::TestCase
   setup do
-    @product = products(:one)
+    @product = products(:ruby)
     @update = {
-      title:       'Lorem Ipsum',
-      description: 'Wibbles are fun!',
-      image_url:   'lorem.jpg',
-      price:       19.95
+        title:       'CoffeeScript',
+        description: 'CoffeeScript is a little language that compiles into JavaScript.',
+        image_url:   'coffe.jpg',
+        price:       45.95,
+        product_locale: 'en'
     }
   end
 
@@ -49,7 +50,6 @@ class ProductsControllerTest < ActionController::TestCase
       delete :destroy, id: @product
     end
 
-    assert_redirected_to products_path
+    assert_redirected_to products_url
   end
-
 end

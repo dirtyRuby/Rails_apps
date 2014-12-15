@@ -1,0 +1,36 @@
+o: ActiveSupport::Cache::Entry:@valueI"£            <div class="entry">
+                <img alt="Sdfsdf" src="/images/sdfsdf.jpg" />
+                <h3>assdfsdfsdf</h3>
+                sdfsdfds
+                <div class="price_line">
+                    <span class="price">$12.00</span>
+                    <form action="/en/line_items?product_id=7" class="button_to" data-remote="true" method="post"><div><input type="submit" value="Add to Card" /><input name="authenticity_token" type="hidden" value="BABY6djBdkPlaQXt/jU2Uc9rRDH3NJPbfhPXBmY5FRM=" /></div></form>
+                </div>
+            </div>
+            <div class="entry">
+                <img alt="Coffe" src="/assets/coffe.jpg" />
+                <h3>CoffeScript</h3>
+                <p>
+								CoffeeScript is a little language that compiles into JavaScript.
+                Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
+                CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way.
+							</p>
+                <div class="price_line">
+                    <span class="price">$45.95</span>
+                    <form action="/en/line_items?product_id=5" class="button_to" data-remote="true" method="post"><div><input type="submit" value="Add to Card" /><input name="authenticity_token" type="hidden" value="BABY6djBdkPlaQXt/jU2Uc9rRDH3NJPbfhPXBmY5FRM=" /></div></form>
+                </div>
+            </div>
+            <div class="entry">
+                <img alt="Ruby" src="/assets/ruby.jpg" />
+                <h3>Programming Ruby 1.9 &amp; 2.0</h3>
+                <p> 
+								Ruby is the fastest growing and most exciting dynamic language
+								out there. If you need to get working programs delivered fast,
+								you should add Ruby to your toolbox.
+							</p>
+                <div class="price_line">
+                    <span class="price">$49.95</span>
+                    <form action="/en/line_items?product_id=4" class="button_to" data-remote="true" method="post"><div><input type="submit" value="Add to Card" /><input name="authenticity_token" type="hidden" value="BABY6djBdkPlaQXt/jU2Uc9rRDH3NJPbfhPXBmY5FRM=" /></div></form>
+                </div>
+            </div>
+:ET:@created_atf1418034840.9824097:@expires_in0

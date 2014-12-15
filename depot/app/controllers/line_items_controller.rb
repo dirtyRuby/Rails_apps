@@ -1,6 +1,8 @@
 class LineItemsController < ApplicationController
   include CurrentCart
-  before_action :set_cart, only: [:create]
+
+  skip_before_action :authorize, only: [:create, :destroy]
+  before_action :set_cart, only: [:create, :destroy]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -28,10 +30,11 @@ class LineItemsController < ApplicationController
   def create
     session[:counter] = 0
     product = Product.find(params[:product_id])
-    @line_item = @cart.add_product(product.id)
+    @line_item = @cart.add_product(product.id, product.price)
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart }
+        format.html { redirect_to store_url }
+        format.js { @current_item = @line_item }
         format.json { render action: 'show',
                              status: :created, location: @line_item }
       else
@@ -65,9 +68,9 @@ class LineItemsController < ApplicationController
     else
       @line_item.destroy
     end
-
     respond_to do |format|
-      format.html { redirect_to cart_url(session[:cart_id]), notice: 'Line item  was successfully removed.' }
+      format.html { redirect_to store_url }
+      format.js { @current_item = @line_item }
       format.json { head :no_content }
     end
   end

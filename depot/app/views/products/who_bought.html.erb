@@ -1,0 +1,18 @@
+<% @product.orders.each do |order|%>
+  <h2> Order <%= order.id %></h2>
+  <p>Shipped to <%= order.address %></p>
+  <table>
+    <tr>
+      <th>Product</th>
+      <th>Amount</th>
+      <th>Price</th>
+    </tr>
+    <% order.line_items do |item| %>
+    <tr>
+      <td><%= item.product.name %></td>
+      <td><%= item.quantity %></td>
+      <td><%= number_to_currency item.total_price %></td>
+    </tr>
+    <% end %>
+  </table>
+<% end %>

@@ -1,21 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
-
-two:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+jquery:
+  id:             1
+  title:          JqueryTheBook
+  description:    JavaScript_library
+  image_url:      Jquery.jpg
+  price:          19.99
+  product_locale: en
 
 ruby:
-  title: Programming Ruby 1.9
-  description: Ruby is the fastest growing and most exciting dynamic
-               language out there. If you need to get working programs
-               delivered fast, you should add Ruby to your toolbox.
-  price:       49.50
-  image_url:   ruby.png
+  id:             2
+  title:          ProgrammingRuby
+  description:    MyString
+  image_url:      Ruby.jpg
+  price:          49.50
+  product_locale: es
